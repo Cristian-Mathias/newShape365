@@ -1,0 +1,77 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    color: #E4E6D9;
+    background-color: #273526;
+}
+
+.headerTitle {
+    font-size: 20px;
+}
+
+.headerSaudacao {
+    font-size: 14px;
+}
+
+.headerbutton button {
+    width: 50px;
+    height: 30px;
+    color: #E4E6D9;
+    background-color: #6D8777;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.headerbutton button:hover {
+    color: #434536;
+    background-color: #919693;
+}
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.containCards {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.card {
+    width: 180px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C0CFB2;
+}
+
+.cardUser {
+    height: 170px;
+    padding: 10px;
+    font-size: 18px;
+    color: #273526
+}
+
+.cardUserQtd {
+    height: 50px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #000000fd;
+}
+.containLista{
+    margin-top: 20px;
+}
