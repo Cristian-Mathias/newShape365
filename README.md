@@ -1,6 +1,4 @@
-<h1>
-    <img src="src\assets\Logo.png" alt="Logomarca" />
-</h1>
+
 
 # New Shape 365
 
