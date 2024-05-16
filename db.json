@@ -1,0 +1,124 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Bruna Prattes",
+      "pratica_esportiva": "Basquete",
+      "nome_local": "Quadra da Escola",
+      "cep": "54321-987",
+      "logradouro": "Avenida Brasil",
+      "bairro": "Bela Vista",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "complemento": "Perto do Ginásio Municipal"
+    },
+    {
+      "id": "2",
+      "nome": "Vitor Silva",
+      "pratica_esportiva": "Tênis",
+      "nome_local": "Clube de Tênis da Cidade",
+      "cep": "98765-432",
+      "logradouro": "Rua dos Esportes",
+      "bairro": "Jardim das Flores",
+      "cidade": "Belo Horizonte",
+      "uf": "MG",
+      "complemento": "Ao lado do Parque Municipal"
+    },
+    {
+      "id": "3",
+      "nome": "Amanda Fernandes",
+      "pratica_esportiva": "Natação",
+      "nome_local": "Piscina Municipal",
+      "cep": "13579-246",
+      "logradouro": "Avenida das Águas",
+      "bairro": "Praia Grande",
+      "cidade": "Fortaleza",
+      "uf": "CE",
+      "complemento": "Dentro do Parque Aquático"
+    },
+    {
+      "id": "4",
+      "nome": "Carlos Silva",
+      "pratica_esportiva": "Futebol",
+      "nome_local": "Campo do Bairro",
+      "cep": "12345-678",
+      "logradouro": "Rua Argentina",
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "complemento": "Próximo ao Parque Municipal"
+    },
+    {
+      "id": "5",
+      "nome": "Ana Pereira",
+      "pratica_esportiva": "Vôlei de Praia",
+      "nome_local": "Praia do Litoral",
+      "cep": "98765-432",
+      "logradouro": "Avenida da Praia",
+      "bairro": "Beira Mar",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "complemento": "Em frente ao Quiosque 12"
+    },
+    {
+      "id": "6",
+      "nome": "Laura Fernandes",
+      "pratica_esportiva": "Tênis",
+      "nome_local": "Clube de Tênis",
+      "cep": "13579-246",
+      "logradouro": "Avenida das Raquetes",
+      "bairro": "Jardim Tênis",
+      "cidade": "Curitiba",
+      "uf": "PR",
+      "complemento": "Ao lado da Quadra Coberta"
+    },
+    {
+      "id": "7",
+      "nome": "Bruna Prattes",
+      "pratica_esportiva": "Basquete",
+      "nome_local": "Quadra da Escola",
+      "cep": "54321-987",
+      "logradouro": "Avenida Brasil",
+      "bairro": "Bela Vista",
+      "cidade": "Rio de Janeiro",
+      "uf": "RJ",
+      "complemento": "Perto do Ginásio Municipal"
+    },
+    {
+      "id": "8",
+      "nome": "Carlos Silva",
+      "pratica_esportiva": "Futebol",
+      "nome_local": "Campo do Bairro",
+      "cep": "12345-678",
+      "logradouro": "Rua Argentina",
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "complemento": "Próximo ao Parque Municipal"
+    },
+    {
+      "id": "9",
+      "nome": "Ana Pereira",
+      "pratica_esportiva": "Vôlei de Praia",
+      "nome_local": "Praia do Litoral",
+      "cep": "98765-432",
+      "logradouro": "Avenida da Praia",
+      "bairro": "Beira Mar",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "complemento": "Em frente ao Quiosque 12"
+    },
+    {
+      "nome": "Carlos Oliveira",
+      "pratica_esportiva": "Futebol",
+      "nome_local": "Futebol Esporte Clube",
+      "cep": "88745000",
+      "logradouro": "Santa Lucia",
+      "bairro": "Santa Lucia",
+      "cidade": "Capivari de Baixo",
+      "uf": "SC",
+      "complemento": "N° 1569",
+      "id": "10"
+    }
+  ]
+}
