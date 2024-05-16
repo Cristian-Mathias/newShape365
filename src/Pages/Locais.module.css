@@ -1,0 +1,206 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    padding: 10px;
+    color: #E4E6D9;
+    background-color: #273526;
+}
+
+.headerTitle {
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.headerLink {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #E4E6D9;
+    font-size: 14px;
+    background-color: #6D8777;
+    border-radius: 4px;
+}
+
+.headerSaudacao {
+    font-size: 14px;
+}
+
+.headerbutton button {
+    width: 50px;
+    height: 30px;
+    color: #E4E6D9;
+    background-color: #6D8777;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.headerbutton button:hover {
+    color: #434536;
+    background-color: #919693;
+}
+
+.containerSection {
+    margin: 5px;
+    padding: 5px;
+}
+
+.tituloTabela {
+    text-align: center;
+    padding: 5px;
+}
+
+.containerTabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.trThOpcoes {
+    width: 100px;
+}
+
+.trTh {
+    width: 300px;
+    padding: 10px;
+    font-size: 14px;
+}
+.containerTabela table thead,th{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 10px;
+}
+.thOpcoes{
+    width: 100px;
+    padding: 10px;
+}
+.trTd {
+    width: 300px;
+    padding: 10px;
+}
+
+.trTdOpcoes {
+    width: 100px;
+    padding: 10px;
+}
+
+.containerTabela table tbody,
+td {
+    display: flex;
+    flex-direction: column;
+    color: #6d8777de;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.containerTabela td {
+    background-color: #91969345;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    width:40px;
+    margin:2px ;
+    padding: 2px;
+    color: #195c32d4;
+    background-color: #4345363f;
+    font-size: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.btnExcluir{
+    width:40px;
+    margin:2px ;
+    padding: 2px;
+    color: #ec6a3ba9;
+    background-color: #4345363f;
+    font-size: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #ebedde;
+}
+.btnExcluir:hover{
+    background-color: #ebedde;
+}
+
+
+/* MODAL */
+.containerForm {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+.title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.containerEmailLabel {
+    width: 600px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.label {
+    padding: 5px;
+    color: #434d4d;
+    font-size: 12px;
+}
+
+.input input {
+    padding: 5px;
+    width: 300px;
+    height: 35px;
+    
+}
+.buttonEditar{
+    background-color: #75a99c;
+    border: none;
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.buttonEditar:hover{
+    background-color: #75a99c92;
+    color: #231b0e98;
+}

@@ -1,3 +1,4 @@
+
 .headerContainer {
     display: flex;
     flex-direction: row;
@@ -9,20 +10,18 @@
     color: #E4E6D9;
     background-color: #273526;
 }
-
 .headerTitle {
     font-size: 20px;
     width: 200px;
     height: 30px;
-
+   
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
+   
 }
-
 .headerLink {
     width: 100px;
     height: 30px;
@@ -35,11 +34,9 @@
     background-color: #6D8777;
     border-radius: 4px;
 }
-
 .headerSaudacao {
     font-size: 14px;
 }
-
 .headerbutton button {
     width: 50px;
     height: 30px;
@@ -49,98 +46,93 @@
     border-radius: 4px;
     cursor: pointer;
 }
-
 .headerbutton button:hover {
     color: #434536;
     background-color: #919693;
 }
-
-.mainContainer {
+.containerMain {
     width: 100%;
+    height: 540px;
+    background-color: #67988b45;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
-.containCards {
-    width: 300px;
+.containerForm {
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid #E4E6D9;
+    background-color: #6D8777;
     margin-top: 20px;
-    gap: 10px;
+    margin-bottom: 20px;
 }
-
-.card {
-    width: 180px;
-    height: 210px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #C0CFB2;
-}
-
-.cardUser {
-    height: 170px;
-    padding: 10px;
-    font-size: 18px;
-    color: #273526
-}
-
-.cardUserQtd {
-    height: 50px;
-    padding: 10px;
-    font-size: 25px;
-    font-weight: 600;
-    color: #000000fd;
-}
-
-.containLista {
-    margin-top: 20px;
-}
-
-.tituloTabela h2,
-h3,
-p {
-    padding: 5px;
-}
-.tituloTabela p{
-    font-size: 14px;
-}
-.containerTabela {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-.trTh {
+.containerParagrafos{
     width: 400px;
-    padding: 5px;
-    font-size: 14px;
-}
-
-.containerTabela table thead,
-tr {
+    height: 40px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.paragrafos p {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+.containerEmailLabel {
+    width: 205px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
-.trTd {
-    width: 400px;
-    padding: 10px;
+.label {
+    padding: 5px;
+    color: #434d4d;
+    font-size: 12px;
+}
+.input select {
+    padding: 5px;
+    width: 205px;
+    height: 30px;
+}
+.input input {
+    padding: 5px;
+    width: 205px;
+    height: 30px;
 }
 
-.containerTabela table tbody,
-td {
-    display: flex;
-    flex-direction: column;
-    color: #6d8777de;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
+.buttons button {
+    width: 205px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #489d98;
+    border: none;
+    cursor: pointer;
+    background-color: #434d4d;
 }
 
-.containerTabela td {
-    background-color: #91969345;
+.buttons button:hover {
+    background-color: #739a9a;
+    color: #162d2b;
+}
+.linkLogin p {
+    font-size: 12px;
+    color:#ece93b8f ;
+    padding: 5px;
 }
