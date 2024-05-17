@@ -91,8 +91,6 @@ function Locais() {
             alert('Cadastro editado com sucesso');
             setOpenModal(false);
             getUsuarios();
-
-            // Limpe os estados para os valores iniciais vazios após a submissão bem-sucedida
             setNome('');
             setPraticaEsportiva('');
             setNomeLocal('');

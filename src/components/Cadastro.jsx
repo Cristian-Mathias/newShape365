@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import axios from 'axios';
 import styles from '../components/Cadastro.module.css'
 
 const Cadastro = () => {
     const navigate = useNavigate()
-    const [input, setInput] = useState({
+    const [formData, setFormData] = useState({
         name: '',
         sexo: '',
         cpf: '',
@@ -18,10 +19,36 @@ const Cadastro = () => {
         uf: '',
         complemento: '',
     })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+        if (name === 'cep' && value.length === 9) {
+            fetchAddress(value.trim(''));
+        }
+        
+    };
+
+    const fetchAddress = async (cep) => {
+        try {
+            const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+            const data = response.data;
+            setFormData({
+                ...formData,
+                logradouro: data.logradouro,
+                bairro: data.bairro,
+                cidade: data.localidade,
+                uf: data.uf,
+            });
+        } catch (error) {
+            console.error('Erro ao buscar o CEP:', error);
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        localStorage.setItem('user', JSON.stringify(input))
+        localStorage.setItem('user', JSON.stringify(formData))
         navigate('/login')
 
         alert('Cadastro realizado com sucesso!')
@@ -47,8 +74,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='name'
-                                    value={input.name}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     type="text"
                                     minLength={4}
                                     required
@@ -60,8 +87,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='sexo'
-                                    value={input.sexo}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.sexo}
+                                    onChange={handleChange}
                                     type="text"
                                     required
                                 />
@@ -74,8 +101,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='cpf'
-                                    value={input.cpf}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.cpf}
+                                    onChange={handleChange}
                                     type="text"
                                     maxLengthLength={14}
                                     pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
@@ -89,8 +116,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='nascimento'
-                                    value={input.nascimento}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.nascimento}
+                                    onChange={handleChange}
                                     type="text"
                                     required
                                     pattern="\d{2}/\d{2}/\d{4}"
@@ -105,8 +132,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='email'
-                                    value={input.email}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     type="email"
                                     required
                                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -118,8 +145,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='password'
-                                    value={input.password}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.password}
+                                    onChange={handleChange}
                                     type="password"
                                     required
                                 />
@@ -132,8 +159,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='cep'
-                                    value={input.cep}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.cep}
+                                    onChange={handleChange}
                                     type="text"
                                     maxLength={9}
                                     required
@@ -147,8 +174,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='logradouro'
-                                    value={input.logradouro}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.logradouro}
+                                    onChange={handleChange}
                                     type="text"
                                     required
                                 />
@@ -161,8 +188,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='bairro'
-                                    value={input.bairro}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.bairro}
+                                    onChange={handleChange}
                                     type="text"
                                     required
                                 />
@@ -173,8 +200,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='cidade'
-                                    value={input.cidade}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.cidade}
+                                    onChange={handleChange}
                                     type="text"
                                     required />
                             </div>
@@ -186,8 +213,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='uf'
-                                    value={input.uf}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.uf}
+                                    onChange={handleChange}
                                     type="text" 
                                     required/>
                             </div>
@@ -197,8 +224,8 @@ const Cadastro = () => {
                             <div className={styles.input}>
                                 <input
                                     name='complemento'
-                                    value={input.complemento}
-                                    onChange={(e) => setInput({ ...input, [e.target.name]: e.target.value })}
+                                    value={formData.complemento}
+                                    onChange={handleChange}
                                     type="text" 
                                     required/>
                             </div>
