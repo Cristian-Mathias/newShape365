@@ -1,5 +1,4 @@
 
-
 # New Shape 365
 
 * Projeto avaliativo  Módulo 1 do curso  Futuro Dev Tubarão V2.
