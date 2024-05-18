@@ -12,11 +12,7 @@ function App() {
   return (
     <>
       <Router>
-        {/* <nav>
-          <Link to='/login'>Login</Link>
-          <Link to='/cadastro'>Cadastro</Link>
-          <Link to='/home'>Home</Link>
-        </nav> */}
+       
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/cadastro' element={<Cadastro />} />

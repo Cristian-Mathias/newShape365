@@ -109,16 +109,28 @@
       "complemento": "Em frente ao Quiosque 12"
     },
     {
-      "nome": "Carlos Oliveira",
-      "pratica_esportiva": "Futebol",
-      "nome_local": "Futebol Esporte Clube",
-      "cep": "88745000",
-      "logradouro": "Santa Lucia",
-      "bairro": "Santa Lucia",
-      "cidade": "Capivari de Baixo",
+      "nome": "Bruna",
+      "pratica_esportiva": "Boxe",
+      "nome_local": "Arena Joinville",
+      "cep": "88020010",
+      "logradouro": "Rua Emílio Blum",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
       "uf": "SC",
-      "complemento": "N° 1569",
-      "id": "10"
+      "complemento": "N° 20",
+      "id": "f535"
+    },
+    {
+      "id": "6363",
+      "nome": "Bruna Cavalcante",
+      "pratica_esportiva": "Natação",
+      "nome_local": "Piscina Olímpica",
+      "cep": "88020010",
+      "logradouro": "Rua Emílio Blum",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "uf": "SC",
+      "complemento": "N 2000"
     }
   ]
 }
