@@ -28,14 +28,26 @@ const CadastroLocal = () => {
         complemento: "",
     });
 
+    
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-        if (name === 'cep' && value.length === 9) {
-            fetchAddress(value.replace('-', ''));
+    
+        let cleanedValue = value;
+        if (name === 'cep') {
+            cleanedValue = value.replace(/\D/g, ''); 
+        }
+        setFormData({ ...formData, [name]: cleanedValue });
+    };
+    
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+        if (name === 'cep' && value.length === 8) {
+            fetchAddress(value);
         }
     };
-
+    
+    
     const fetchAddress = async (cep) => {
         try {
             const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
@@ -47,6 +59,7 @@ const CadastroLocal = () => {
                 cidade: data.localidade,
                 uf: data.uf,
             });
+            console.log('Dados recebidos da API ViaCEP:', data);
         } catch (error) {
             console.error('Erro ao buscar o CEP:', error);
         }
@@ -66,6 +79,7 @@ const CadastroLocal = () => {
             .then(data => {
                 alert('Usuário cadastrado com sucesso:', data);
                 navigate('/locais')
+                
             })
             .catch(error => {
                 console.error('Erro ao cadastrar usuário:', error);
@@ -151,11 +165,10 @@ const CadastroLocal = () => {
                                         value={formData.cep}
                                         onChange={handleChange}
                                         type="text"
-                                        maxLength={9}
+                                        maxLength={8}
                                         required
                                         pattern="\d{5}-?\d{3}"
-                                        placeholder="00000-000"
-
+                                        onBlur={handleBlur}
                                     />
                                 </div>
                             </div>

@@ -22,11 +22,19 @@ const Cadastro = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-        if (name === 'cep' && value.length === 9) {
-            fetchAddress(value.trim(''));
+    
+        let cleanedValue = value;
+        if (name === 'cep') {
+            cleanedValue = value.replace(/\D/g, ''); 
         }
-        
+        setFormData({ ...formData, [name]: cleanedValue });
+    };
+    
+    const handleBlur = (e) => {
+        const { name, value } = e.target;
+        if (name === 'cep' && value.length === 8) {
+            fetchAddress(value);
+        }
     };
 
     const fetchAddress = async (cep) => {
@@ -162,10 +170,10 @@ const Cadastro = () => {
                                     value={formData.cep}
                                     onChange={handleChange}
                                     type="text"
-                                    maxLength={9}
+                                    maxLength={8}
                                     required
                                     pattern="\d{5}-?\d{3}"
-                                    placeholder="00000-000"
+                                    onBlur={handleBlur}
                                 />
                             </div>
                         </div>
